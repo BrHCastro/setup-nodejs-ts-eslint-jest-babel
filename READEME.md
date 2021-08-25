@@ -93,4 +93,73 @@
     }
 ```
 
+## INSTALANDO ESLINT:
+```
+    yarn add eslint -D
+    -------------------------------
+    yarn eslint --init
+    ------------------------------
 
+    ✔ How would you like to use ESLint? · style     
+    ✔ What type of modules does your project use? · esm
+    ✔ Which framework does your project use? · none
+    ✔ Does your project use TypeScript? · No / Yes
+    ✔ Where does your code run? · node
+    ✔ How would you like to define a style for your project? · guide
+    ✔ Which style guide do you want to follow? · standard
+    ✔ What format do you want your config file to be in? · JSON
+```
+> ***É necessário ter a extensão do ESlint no vscode e, talves, seja necessário instalar essa dependência > @typescript-eslint/parser -D***
+
+## INSTALANDO JEST:
+
+```
+    yarn add jest -D
+    ------------------------------------------
+    yarn jest --init
+    ------------------------------------------
+
+    ✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+    ✔ Would you like to use Typescript for the configuration file? … no
+    ✔ Choose the test environment that will be used for testing › node
+    ✔ Do you want Jest to add coverage reports? … no
+    ✔ Which provider should be used to instrument code for coverage? › babel
+    ✔ Automatically clear mock calls and instances between every test? … yes
+    
+    ------------------------------------------
+    yarn add ts-jest -D
+    ------------------------------------------
+    yarn add @types/jest -D
+    ------------------------------------------
+
+```
+```js
+    //jest.config.js
+    const { compilerOptions } = require('./tsconfig.json')
+    const { pathsToModeleNameMapper } = require('ts-jest')
+    
+    ...
+
+    moduleNameMapper: pathsToModeleNameMapper(compilerOptions.paths, { prefix: '<rootDIr>' }),
+    
+    ...
+
+    preset: "ts-jest"
+```
+```json
+//.eslintrc.json
+
+    "env": {
+        "es2021": true,
+        "node": true,
+        "jest": true
+    }
+```
+```json
+//.tsconfig.json
+    ...
+
+    "include": [
+    "src/**/*"
+  ]
+```
