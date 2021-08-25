@@ -163,3 +163,42 @@
     "src/**/*"
   ]
 ```
+
+## INSTALAÇÃO BABEL:
+
+```
+    yarn add -D @babel/cli @babel/core @babel/node @babel/preset-env @babel/preset-typescript babel-plugin-module-resolver
+```
+```js
+    //babel.config.js
+
+    module.exports = {
+        presets: [
+            [
+            '@babel/preset-env',
+            {
+                targets: {
+                node: 'current'
+                }
+            }
+            ],
+            '@babel/preset-typescript'
+        ],
+        plugins: [
+            ['module-resolver', {
+            alias: {
+                '@models': './src/models',
+                '@controllers': './src/controllers'
+            }
+            }]
+        ],
+        ignore: [
+            '**/*.spec.ts'
+        ]
+    }
+```
+```json
+    "scripts": {
+        "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    }
+```
