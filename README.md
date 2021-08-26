@@ -1,3 +1,14 @@
+![Warchers](https://img.shields.io/github/watchers/brhcastro/setup-nodejs-ts-eslint-jest-babel?style=social)
+
+
+
+![LICENSE](https://img.shields.io/github/license/brhcastro/setup-nodejs-ts-eslint-jest-babel?style=flat-square)
+![TS](https://img.shields.io/github/package-json/dependency-version/brhcastro/setup-nodejs-ts-eslint-jest-babel/dev/typescript/master?style=flat-square )
+![jest](https://img.shields.io/github/package-json/dependency-version/brhcastro/setup-nodejs-ts-eslint-jest-babel/dev/jest/master?style=flat-square)
+![ESlint](https://img.shields.io/github/package-json/dependency-version/brhcastro/setup-nodejs-ts-eslint-jest-babel/dev/eslint/master?style=flat-square)
+![express](https://img.shields.io/github/package-json/dependency-version/brhcastro/setup-nodejs-ts-eslint-jest-babel/express?style=flat-square)
+
+
 # SETUP NODEJS TS ESLINT JEST BABEL 🔨
 
 
@@ -14,7 +25,7 @@
 
 ### 📄 Documentos criados...
 - package.json
-- tscongig.json
+- tsconfig.json
 
 ## ✔ ADICIONANDO DEP TS-NODE-DEV:
 > Compila TS automaticamente durante o desenvolvimento (muito + produtivo 🔥🔥)
