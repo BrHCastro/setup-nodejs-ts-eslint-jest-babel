@@ -1,8 +1,8 @@
+# SETUP NODEJS TS ESLINT JEST BABEL 🔨
 
 
 
-
-## INICIANDO...
+## 🔰 INICIANDO...
 
 ```
     git init
@@ -12,16 +12,16 @@
     yarn tsc --init
 ```
 
-### Documentos criados...
+### 📄 Documentos criados...
 - package.json
 - tscongig.json
 
-## ADICIONANDO DEP TS-NODE-DEV.
+## ✔ ADICIONANDO DEP TS-NODE-DEV:
 > Compila TS automaticamente durante o desenvolvimento (muito + produtivo 🔥🔥)
 ```
     yarn add ts-node-dev -D
 ```
-### Adicionando no package.json...
+### ✔ Adicionando no package.json...
 ```json
     //package.json
 
@@ -42,7 +42,7 @@
     },
 ```
 
-## CONFIGURAÇÃO DO TSCONFIG.JSON.
+## ⚙ CONFIGURAÇÃO DO TSCONFIG.JSON:
 ```json
     //tsconfig.json
 
@@ -68,7 +68,7 @@
         }
     }
 ```
-## CONFIGURANDO OS PATHS:
+## ⚙ CONFIGURANDO OS PATHS:
 > Basicamente atalhos dos caminhos para chegar em nossas pastas. Integra muito bem com o auto import.
 
 ```json
@@ -93,7 +93,7 @@
     }
 ```
 
-## INSTALANDO ESLINT:
+## ✔ INSTALANDO ESLINT: 
 ```
     yarn add eslint -D
     -------------------------------
@@ -109,9 +109,9 @@
     ✔ Which style guide do you want to follow? · standard
     ✔ What format do you want your config file to be in? · JSON
 ```
-> ***É necessário ter a extensão do ESlint no vscode e, talves, seja necessário instalar essa dependência > @typescript-eslint/parser -D***
+> ***É necessário ter a extensão do ESlint no vscode e, talves, seja necessário instalar essa dependência > @typescript-eslint/parser -D*** 👍
 
-## INSTALANDO JEST:
+## ✔ INSTALANDO JEST:
 
 ```
     yarn add jest -D
@@ -133,6 +133,7 @@
     ------------------------------------------
 
 ```
+### ⚙ CONFIGURANDO O JEST:
 ```js
     //jest.config.js
     const { compilerOptions } = require('./tsconfig.json')
@@ -146,6 +147,7 @@
 
     preset: "ts-jest"
 ```
+### ⚙ CONFIGURANDO O ESLINT:
 ```json
 //.eslintrc.json
 
@@ -164,11 +166,12 @@
   ]
 ```
 
-## INSTALAÇÃO BABEL:
+## ✔ INSTALAÇÃO BABEL:
 
 ```
     yarn add -D @babel/cli @babel/core @babel/node @babel/preset-env @babel/preset-typescript babel-plugin-module-resolver
 ```
+### ⚙ CONFIGURANDO O BABEL:
 ```js
     //babel.config.js
 
@@ -197,8 +200,15 @@
         ]
     }
 ```
+### ✔ CRIANDO O SCRIPT DE BUILD 😎👍
 ```json
     "scripts": {
         "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     }
 ```
+
+## Autor:
+Henrique de Castro
+
+## Licença:
+Projeto está sob licença do [MIT](https://opensource.org/licenses/mit-license.php)
